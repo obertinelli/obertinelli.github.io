@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -6,9 +5,9 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ececec;
-  color: #333;
+  font-family: 'Courier New', monospace;
+  background-color: #171c28;
+  color: #eee;
   line-height: 1.6;
   padding: 20px;
 }
@@ -37,9 +36,9 @@ justify-content: center;
 
 .project {
   flex: 1 1 300px;
-  background-color: #fff;
+  background-color: #2f3b54;
   padding: 20px;
-  border: 5px outset #b5c8cc;
+  border: 2px outset #ffcc66;
   border-radius: 30px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   min-width: 280px;
@@ -48,11 +47,11 @@ justify-content: center;
 
 .project h2 {
   margin-bottom: 10px;
-  color: #3b2f2f;
+  color: #8695b7;
 }
 
 .project a {
-  color: #b5c8cc;
+  color: #8695b7;
   text-decoration: none;
   font-weight: bold;
 }
@@ -66,7 +65,7 @@ justify-content: center;
   margin: 0;
   padding: 0;
   width: 200px;
-  background-color: #b5c8cc;
+  background-color: #0c1e3e;
   position: fixed;
   height: 100%;
   overflow: auto;
@@ -75,15 +74,15 @@ justify-content: center;
 
 .sidebar a {
   display: block;
-  color: black;
+  color: #bae67e;
   padding: 16px;
   text-decoration: none;
 }
 
 
 .sidebar a.active {
-  background-color: #ffff;
-  color: #333;
+  background-color: #122c5a;
+  color: #38fbdb;
 }
 
 
