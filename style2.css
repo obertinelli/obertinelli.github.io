@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #38bdf8;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-family: monospace;
+}
+
+header p {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #94a3b8;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.project {
+  flex: 1 1 300px;
+  background: linear-gradient(to bottom right, #1e293b, #334155);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project h2 {
+  margin-bottom: 10px;
+  color: #7dd3fc;
+  font-size: 1.2rem;
+}
+
+.project p {
+  color: #cbd5e1;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.project a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project a:hover {
+  text-decoration: underline;
+  color: #e0f2fe;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #1e293b;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow: auto;
+  padding-top: 40px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar a {
+  display: block;
+  color: #a5f3fc;
+  padding: 16px 24px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #0f172a;
+  color: #67e8f9;
+}
+
+.content {
+  margin-left: 240px;
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+footer a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+#sidebarToggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 999;
+  background-color: #334155;
+  color: #e2e8f0;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+#sidebarToggle:hover {
+  background-color: #1e293b;
+}
+
+.sidebar.collapsed {
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+
+.content {
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar.collapsed ~ .content {
+  margin-left: 0;
+}
+
+.contact-links {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 16px;
+  font-size: 0.95rem;
+}
+
+.contact-links li {
+  margin-bottom: 12px;
+}
+
+.contact-links a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+  color: #e0f2fe;
+}
+
+.resume-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  margin-top: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.resume-image:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.skill-tag {
+  background-color: #334155;
+  color: #ef4673;
+  font-size: 0.75rem;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid #475569;
+  font-weight: 500;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.skill-tag:hover {
+  background-color: #1e293b;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .content {
+    margin-left: 0;
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project {
+    max-width: 100%;
+  }
+
+  header p {
+    padding: 0 10px;
+  }
+
+  .sidebar {
+    flex-direction: column;
+  }
+
+  .sidebar a {
+    text-align: center;
+    padding: 12px;
+  }
+}

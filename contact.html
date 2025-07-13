@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+</html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Olivia Bertinelli | Contact Me</title>
+  <link rel="stylesheet" href="style2.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <h1>&lt;/connect with me&gt;</h1>
+	
+<button id="sidebarToggle">☰ menu</button>
+<div class="layout">
+
+  <div id="sidebar" class="sidebar">
+    <a href="index.html">01. home</a>
+    <a href="contact.html">02. contact</a>
+    <a href="about.html">03. about me</a>
+  </div>
+  <div class="content">
+      <main>
+	  <div class="projects-container">	
+        <section class="project">
+          <h2>contact info</h2>
+          <p>for any inquiries or questions &#40;or just to say hello!&#41; feel free to reach out on these platforms</p>
+          
+          <ul class="contact-links">
+            <li><strong>email:</strong> <a href="mailto:olivia.dannielle@gmail.com">olivia.dannielle@gmail.com</a></li>
+            <li><strong>linkedin:</strong> <a href="https://www.linkedin.com/in/olivia-bertinelli-75a99518a" target="_blank">linkedin.com/in/olivia-bertinelli-75a99518a</a></li>
+            <li><strong>github:</strong> <a href="https://github.com/obertinelli" target="_blank">github.com/obertinelli</a></li>
+          </ul>
+        </section>
+      </main>
+  </div>
+  </div>
+
+  <footer>
+    <p>© 2025 olivia bertinelli • <a href="https://github.com/obertinelli" target="_blank">GitHub Profile</a></p>
+  </footer>
+<script>
+  const toggleButton = document.getElementById('sidebarToggle');
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.add('collapsed');
+
+  toggleButton.addEventListener('click', () => {
+    sidebar.classList.toggle('collapsed');
+  });
+</script>
+</body>
+</html>

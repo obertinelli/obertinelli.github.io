@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Olivia Bertinelli | Full-Stack Dev</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <h1>&lt;/olivia bertinelli&gt;</h1>
+    <p>Hi! I am a full-stack developer with a passion for graphic design, software development and engineering, UI and UX design, and advanced simulation.</p>
+  </header>
+
+<button id="sidebarToggle">☰ menu</button>
+<div class="layout">
+
+  <div id="sidebar" class="sidebar">
+    <a href="index.html">01. home</a>
+    <a href="contact.html">02. contact</a>
+    <a href="about.html">03. about me</a>
+  </div>
+  <div class="content">
+  <main>    
+    <div class="projects-container">
+	
+	        <section class="project">
+        <h2>budget tracker.py</h2>
+        <p>Tkinter GUI budget tracker that allows the user to create JSON files with monthly budget and
+		expenses that can also be visualized with charts.</p>
+        <div class="tags">
+			<span class="tag">Python</span>
+			<span class="tag">Tkinter</span>
+			<span class="tag">Pandas</span>
+		</div>
+		<a href="https://github.com/obertinelli/budget-gui" target="_blank">View on GitHub</a>
+      </section>
+	  
+      <section class="project">
+        <h2>cave jumper.godot</h2>
+        <p>This 2D platformer made in Godot engine follows a miner in a cave jumping for coins and dodging enemies in my final project for a Game Development class. All visual assets and spritesheets were created by me. </p>
+        <div class="tags">
+			<span class="tag">Godot</span>
+			<span class="tag">Pixel art</span>
+		</div>
+		<a href="https://github.com/obertinelli/cave-jumper" target="_blank">View on GitHub</a>
+      </section>
+
+      <section class="project">
+        <h2>bookstore inventory tracker.py</h2>
+        <p>I served as the project manager for the creation of this application for a bookstore to track, update,
+		and manage inventory. This was the final project for a Software Development class.</p>
+        <div class="tags">
+			<span class="tag">Python</span>
+			<span class="tag">HTML</span>
+			<span class="tag">CSS</span>
+			<span class="tag">Django</span>
+		</div>
+		<a href="https://github.com/obertinelli/SDEV_220_Final_Project_3BrainCells" target="_blank">View on GitHub</a>
+      </section>
+
+      <section class="project">
+        <h2>bookstore site.html</h2>
+        <p>A website proposal for a local business called Your Bother's Bookstore. This was a final project for
+		a Web Design class.&#40;this website mockup has no affiliation with the business or products portrayed and is for educational&#41
+		purposes only&#41;</p>
+        <div class="tags">
+			<span class="tag">HTML</span>
+			<span class="tag">CSS</span>
+		</div>
+		<a href="https://github.com/obertinelli/bookstore" target="_blank">View on GitHub</a>
+      </section>
+	  
+	   <section class="project">
+        <h2>this portfolio site.html</h2>
+        <p>This great website that you are viewing right now! A cool site to show off my recent projects and skill set.</p>
+        <div class="tags">
+			<span class="tag">HTML</span>
+			<span class="tag">CSS</span>
+			<span class="tag">Javascript</span>
+		</div>
+		<a href="https://github.com/obertinelli/obertinelli.github.io" target="_blank">View on GitHub</a>
+      </section>
+    </div>
+	
+	<section class="project">
+  <h2>project gallery.png</h2>
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="images/cave.png" alt="Cave Jumper Screenshot">
+    </div>
+    <div class="slide fade">
+      <img src="images/ybb.png" alt="Bookstore Website Screenshot">
+    </div>
+    <div class="slide fade">
+      <img src="images/bookinv.png" alt="Bookstore Inventory Screenshot">
+    </div>
+	<div class="slide fade">
+	  <img src="images/expense.png" alt="Expense Tracker Screenshot">
+	  </div>
+
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+
+
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+	<span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+</section>
+
+  </main>
+</div>
+
+  <footer>
+    <p>© 2025 olivia bertinelli • <a href="https://github.com/obertinelli" target="_blank">GitHub Profile</a></p>
+  </footer>
+<script>
+  const toggleButton = document.getElementById('sidebarToggle');
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.add('collapsed');
+
+  toggleButton.addEventListener('click', () => {
+    sidebar.classList.toggle('collapsed');
+  });
+    let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
+
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].classList.remove("active");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].classList.add("active");
+  }
+</script>
+
+</body>
+</html>
